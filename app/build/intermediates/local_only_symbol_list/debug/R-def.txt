@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+id btnConvert
+id btnPick
+id btnSend
+id btnToggleShape
+id imgPreview
+id progressBar
+id seekDuration
+id tvDuration
+id tvPlaceholder
+id tvStatus
+layout activity_main
+mipmap ic_launcher
+string app_name
+style Theme.StickerApp

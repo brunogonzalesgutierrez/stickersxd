@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#0e0e0e">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎬 Sticker Converter"
+        android:textSize="22sp"
+        android:textColor="#f0f0f0"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MP4 / GIF → WhatsApp"
+        android:textSize="13sp"
+        android:textColor="#777777"
+        android:layout_marginBottom="24dp"/>
+
+    <FrameLayout
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="#181818"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sin video"
+            android:textColor="#444444"
+            android:textSize="14sp"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegí un video para empezar"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        android:layout_marginBottom="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnPick"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="📁  ELEGIR VIDEO"
+        android:backgroundTint="#222222"
+        android:textColor="#f0f0f0"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duración máx:"
+            android:textColor="#777"
+            android:textSize="12sp"
+            android:layout_marginEnd="8dp"/>
+
+        <SeekBar
+            android:id="@+id/seekDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="5"
+            android:progress="2"
+            android:progressTint="#25D366"/>
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="3s"
+            android:textColor="#25D366"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="⚡  CONVERTIR A STICKER"
+        android:enabled="false"
+        android:backgroundTint="#222222"
+        android:textColor="#777777"
+        android:layout_marginBottom="8dp"/>
+
+<Button
+        android:id="@+id/btnToggleShape"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Forma: Cuadrado"
+        android:backgroundTint="#222222"
+        android:textColor="#f0f0f0"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="AGREGAR A WHATSAPP"
+        android:enabled="false"
+        android:backgroundTint="#25D366"
+        android:textColor="#000000"/>
+
+</LinearLayout>

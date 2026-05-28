@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.tu.stickerapp-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "com.tu.stickerapp-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-25:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.tu.stickerapp-main-27:/mipmap-hdpi/ic_launcher.png"
+    }
+]

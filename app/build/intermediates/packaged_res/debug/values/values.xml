@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sticker Converter</string>
+    <style name="Theme.StickerApp" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#25D366</item>
+        <item name="colorPrimaryDark">#128C7E</item>
+        <item name="colorAccent">#25D366</item>
+        <item name="android:windowBackground">#0e0e0e</item>
+    </style>
+</resources>

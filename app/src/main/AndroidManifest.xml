@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <queries>
+        <package android:name="com.whatsapp" />
+        <package android:name="com.whatsapp.w4b" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Sticker Converter"
+        android:theme="@style/Theme.StickerApp">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".StickerProvider"
+            android:authorities="com.tu.stickerapp.stickercontentprovider"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ"/>
+
+    </application>
+</manifest>
