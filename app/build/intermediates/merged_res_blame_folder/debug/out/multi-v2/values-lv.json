@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.tu.stickerapp-mergeDebugResources-30:/values-lv/values-lv.xml",
+            "outputFile": "com.tu.stickerapp-mergeDebugResources-31:/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\124b087112c11d806391a69b2206c4af\\transformed\\material-1.12.0\\res\\values-lv\\values-lv.xml",

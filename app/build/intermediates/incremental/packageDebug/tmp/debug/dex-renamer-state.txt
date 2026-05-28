@@ -1,4 +1,4 @@
-#Thu May 28 15:09:02 BOT 2026
+#Thu May 28 17:14:04 BOT 2026
 base.2=C\:\\dev\\StickerApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.2=9/classes.dex
 base.1=C\:\\dev\\StickerApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

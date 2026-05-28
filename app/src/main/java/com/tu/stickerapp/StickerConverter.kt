@@ -272,6 +272,57 @@ class StickerConverter {
         }
         throw IllegalStateException("No VP8/VP8L chunk found in WebP")
     }
+
+    fun convertGifToAnimatedWebP(
+        context: Context,
+        gifFile: File,
+        maxDurationMs: Long = 3000L,
+        fps: Int = 10,
+        sizePx: Int = CANVAS_PX,
+        keepAspectRatio: Boolean = false
+    ): String? {
+        return try {
+            @Suppress("DEPRECATION")
+            val movie = android.graphics.Movie.decodeFile(gifFile.absolutePath) ?: return null
+
+            val gifDuration = movie.duration().let { if (it <= 0) 1000 else it }.toLong()
+            val clipMs      = minOf(gifDuration, maxDurationMs)
+            val totalFrames = (clipMs * fps / 1000L).toInt().coerceAtLeast(1)
+            val frameDelayMs = (1000.0 / fps).toLong()
+
+            val frames = mutableListOf<Bitmap>()
+            for (i in 0 until totalFrames) {
+                val timeMs = ((i.toLong() * clipMs / totalFrames) % gifDuration).toInt()
+                val raw = Bitmap.createBitmap(
+                    movie.width().coerceAtLeast(1),
+                    movie.height().coerceAtLeast(1),
+                    Bitmap.Config.ARGB_8888
+                )
+                val cv = Canvas(raw)
+                cv.drawColor(Color.TRANSPARENT, android.graphics.PorterDuff.Mode.CLEAR)
+                movie.setTime(timeMs)
+                movie.draw(cv, 0f, 0f)
+
+                val scaled = if (keepAspectRatio) scaleKeepAspectOnCanvas(raw, sizePx)
+                            else scaleCenterCrop(raw, sizePx)
+                if (scaled != raw) raw.recycle()
+                frames.add(scaled)
+            }
+
+            if (frames.isEmpty()) return null
+
+            val outFile = File(context.cacheDir, "sticker_animated.webp")
+            val ok = buildAnimatedWebP(frames, outFile, frameDelayMs.toInt())
+            frames.forEach { it.recycle() }
+            if (ok) outFile.absolutePath else null
+
+        } catch (e: Exception) {
+            Log.e(TAG, "Error convirtiendo GIF", e)
+            null
+        }
+    }
+
+
 }
 
 private operator fun ByteArray.plus(other: ByteArray): ByteArray {

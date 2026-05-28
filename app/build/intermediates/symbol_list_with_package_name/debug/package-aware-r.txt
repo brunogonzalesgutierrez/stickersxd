@@ -3210,11 +3210,15 @@ id btnBack
 id btnConvert
 id btnDeletePack
 id btnDeleteSticker
+id btnDownloadUrl
 id btnMyPacks
 id btnPackDetailBack
 id btnPick
+id btnSearchTenor
 id btnSend
 id btnSendPack
+id btnTenorBack
+id btnTenorSearch
 id btnToggleShape
 id buttonPanel
 id cache_measures
@@ -3298,6 +3302,8 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id escape
+id etTenorSearch
+id etVideoUrl
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3321,6 +3327,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3342,6 +3349,7 @@ id ignoreRequest
 id image
 id imgPreview
 id imgSticker
+id imgTenorItem
 id immediateStop
 id included
 id indeterminate
@@ -3484,6 +3492,7 @@ id ratio
 id rectangles
 id recyclerPacks
 id recyclerStickers
+id recyclerTenor
 id report_drawn
 id reverseSawtooth
 id right
@@ -3569,6 +3578,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id tenorProgress
 id text
 id text2
 id textEnd
@@ -3614,6 +3624,7 @@ id tvPackName
 id tvPlaceholder
 id tvStatus
 id tvStickerCount
+id tvTenorEmpty
 id unchecked
 id uniform
 id unlabeled
@@ -3754,6 +3765,7 @@ layout abc_tooltip
 layout activity_main
 layout activity_my_packs
 layout activity_pack_detail
+layout activity_tenor_search
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3774,6 +3786,7 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_pack_card
 layout item_sticker_grid
+layout item_tenor_gif
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

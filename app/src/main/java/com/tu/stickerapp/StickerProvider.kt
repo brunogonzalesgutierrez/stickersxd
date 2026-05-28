@@ -35,7 +35,8 @@ class StickerProvider : ContentProvider() {
     ): Cursor {
         android.util.Log.d("StickerProvider", "query: $uri")
         return when (uriMatcher.match(uri)) {
-            METADATA_CODE, METADATA_CODE_FOR_SINGLE -> buildMetadataCursor()
+            METADATA_CODE            -> buildMetadataCursor(null)
+            METADATA_CODE_FOR_SINGLE -> buildMetadataCursor(uri.lastPathSegment)
             STICKERS_CODE -> {
                 val packId = uri.lastPathSegment ?: return MatrixCursor(arrayOf())
                 buildStickersCursor(packId)
@@ -44,7 +45,7 @@ class StickerProvider : ContentProvider() {
         }
     }
 
-    private fun buildMetadataCursor(): MatrixCursor {
+    private fun buildMetadataCursor(filterPackId: String?): MatrixCursor {
         val cols = arrayOf(
             "sticker_pack_identifier", "sticker_pack_name", "sticker_pack_publisher",
             "sticker_pack_icon", "android_play_store_link", "ios_app_download_link",
@@ -52,10 +53,12 @@ class StickerProvider : ContentProvider() {
             "sticker_pack_privacy_policy_website", "sticker_pack_license_agreement_website",
             "image_data_version", "whatsapp_will_not_cache_stickers", "animated_sticker_pack"
         )
-        val cursor = MatrixCursor(cols)
+        val cursor  = MatrixCursor(cols)
         val storage = PackStorage(context!!)
+        val packs   = storage.loadPacks()
+            .let { all -> if (filterPackId != null) all.filter { it.identifier == filterPackId } else all }
 
-        for (pack in storage.loadPacks()) {
+        for (pack in packs) {
             cursor.addRow(arrayOf(
                 pack.identifier, pack.name, pack.publisher, pack.trayImageFileName,
                 "", "", "", "", "", "",
@@ -64,7 +67,7 @@ class StickerProvider : ContentProvider() {
                 if (pack.isAnimated) "1" else "0"
             ))
         }
-        android.util.Log.d("StickerProvider", "metadata: ${cursor.count} packs")
+        android.util.Log.d("StickerProvider", "metadata devuelta: ${cursor.count} pack(s) para filtro=$filterPackId")
         return cursor
     }
 

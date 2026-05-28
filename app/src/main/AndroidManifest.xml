@@ -6,6 +6,8 @@
         <package android:name="com.whatsapp.w4b" />
     </queries>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +15,7 @@
         android:theme="@style/Theme.StickerApp">
         <activity android:name=".MyPacksActivity"/>
         <activity android:name=".PackDetailActivity"/>
+        <activity android:name=".TenorSearchActivity"/>
 
         <activity
             android:name=".MainActivity"

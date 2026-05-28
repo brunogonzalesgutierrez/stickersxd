@@ -13,6 +13,8 @@
         <package android:name="com.whatsapp.w4b" />
     </queries>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.tu.stickerapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -29,6 +31,7 @@
         android:theme="@style/Theme.StickerApp" >
         <activity android:name="com.tu.stickerapp.MyPacksActivity" />
         <activity android:name="com.tu.stickerapp.PackDetailActivity" />
+        <activity android:name="com.tu.stickerapp.TenorSearchActivity" />
         <activity
             android:name="com.tu.stickerapp.MainActivity"
             android:exported="true" >

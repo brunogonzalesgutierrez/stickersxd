@@ -1,13 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\HP\.gradle\caches\transforms-3\124b087112c11d806391a69b2206c4af\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\transforms-3\f886aa54234d9474d31211f594ef8604\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP\.gradle\caches\transforms-3\a4e73b7269222b7a6ac36214e2ac1a1a\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP\.gradle\caches\transforms-3\45533955110f59b81fa8e1aa54381241\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\transforms-3\3b5c3dac7c13b4b47733b6cbba060b01\transformed\jetified-glide-4.16.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\dd6ae2b90ee257c9c9c56e9a36805418\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HP\.gradle\caches\transforms-3\b97da21c94b55ed47c10c7dd10179add\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.8.0] C:\Users\HP\.gradle\caches\transforms-3\3ed885bf6a3192aa48d8c7eb3de5ca60\transformed\jetified-activity-1.8.0\AndroidManifest.xml:17:1-22:12
@@ -37,12 +38,14 @@ MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\HP\.gradle
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\HP\.gradle\caches\transforms-3\47b1e3a8dc68014eb209f4e26c8754b0\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\5e2dc5b26d00599019f85ce81968a45f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\2a37f3f32c2783966bb14fed8f7c050c\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\61004dcf2988559164e1f3fbb0bc454a\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\transforms-3\c96ffacf0b2a1d4d9fa5d7777ac9e002\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\transforms-3\c1c2e30fec9e5a3f2a1401f8a6681e3e\transformed\jetified-gifdecoder-4.16.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\HP\.gradle\caches\transforms-3\7a8c85c1d1a5e25c49762a7f02c496b9\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\transforms-3\d37c49a6282c9093ca1931e85c39f584\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\cd9291093b3fd7c976014402196157e1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\8680b2862bb1ecbe547138f743323035\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\61004dcf2988559164e1f3fbb0bc454a\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\transforms-3\c96ffacf0b2a1d4d9fa5d7777ac9e002\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\50146a4b5c13b9372965dc0087ddcc19\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\fe1be72de5acf26ba4778c8bba88a4a7\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\b12164d51816564a3fa7e224a4608154\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -64,9 +67,13 @@ package#com.whatsapp.w4b
 ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:6:9-52
 	android:name
 		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:6:18-49
+uses-permission#android.permission.INTERNET
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:9:5-32:19
-INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:9:5-32:19
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:11:5-35:19
+INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:11:5-35:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\HP\.gradle\caches\transforms-3\124b087112c11d806391a69b2206c4af\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\HP\.gradle\caches\transforms-3\124b087112c11d806391a69b2206c4af\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\transforms-3\f886aa54234d9474d31211f594ef8604\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -77,58 +84,62 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\HP\.gradle\cac
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\HP\.gradle\caches\transforms-3\b967e5aedbf664afbcc580ae34f72bd4\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.13.0] C:\Users\HP\.gradle\caches\transforms-3\8a1cd6e55c1c0fc9931afae2c977f274\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.13.0] C:\Users\HP\.gradle\caches\transforms-3\8a1cd6e55c1c0fc9931afae2c977f274\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\transforms-3\d37c49a6282c9093ca1931e85c39f584\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\transforms-3\d37c49a6282c9093ca1931e85c39f584\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\cd9291093b3fd7c976014402196157e1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\cd9291093b3fd7c976014402196157e1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
 		INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\HP\.gradle\caches\transforms-3\8a1cd6e55c1c0fc9931afae2c977f274\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:12:9-42
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:14:9-42
 	android:icon
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:13:9-48
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:15:9-48
 activity#com.tu.stickerapp.MyPacksActivity
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:14:9-52
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:16:9-52
 	android:name
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:14:19-50
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:16:19-50
 activity#com.tu.stickerapp.PackDetailActivity
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:15:9-55
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:17:9-55
 	android:name
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:15:19-53
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:17:19-53
+activity#com.tu.stickerapp.TenorSearchActivity
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:18:9-56
+	android:name
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:18:19-54
 activity#com.tu.stickerapp.MainActivity
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:17:9-24:20
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:20:9-27:20
 	android:exported
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:18:13-41
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:21:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:20:13-23:29
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:21:17-68
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:24:17-68
 	android:name
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:22:17-76
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:25:17-76
 	android:name
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:25:27-74
 provider#com.tu.stickerapp.StickerProvider
-ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:26:9-30:65
+ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:29:9-33:65
 	android:readPermission
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:30:13-63
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:33:13-63
 	android:authorities
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:28:13-75
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:31:13-75
 	android:exported
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:29:13-36
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:27:13-44
+		ADDED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml:30:13-44
 uses-sdk
 INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\dev\StickerApp\app\src\main\AndroidManifest.xml
@@ -141,6 +152,8 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP\.gradle\c
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP\.gradle\caches\transforms-3\a4e73b7269222b7a6ac36214e2ac1a1a\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP\.gradle\caches\transforms-3\45533955110f59b81fa8e1aa54381241\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP\.gradle\caches\transforms-3\45533955110f59b81fa8e1aa54381241\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\transforms-3\3b5c3dac7c13b4b47733b6cbba060b01\transformed\jetified-glide-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\transforms-3\3b5c3dac7c13b4b47733b6cbba060b01\transformed\jetified-glide-4.16.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\dd6ae2b90ee257c9c9c56e9a36805418\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\dd6ae2b90ee257c9c9c56e9a36805418\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\HP\.gradle\caches\transforms-3\b97da21c94b55ed47c10c7dd10179add\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
@@ -199,18 +212,22 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\cac
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\5e2dc5b26d00599019f85ce81968a45f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\2a37f3f32c2783966bb14fed8f7c050c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\2a37f3f32c2783966bb14fed8f7c050c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\61004dcf2988559164e1f3fbb0bc454a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\61004dcf2988559164e1f3fbb0bc454a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\transforms-3\c96ffacf0b2a1d4d9fa5d7777ac9e002\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\transforms-3\c96ffacf0b2a1d4d9fa5d7777ac9e002\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\transforms-3\c1c2e30fec9e5a3f2a1401f8a6681e3e\transformed\jetified-gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\transforms-3\c1c2e30fec9e5a3f2a1401f8a6681e3e\transformed\jetified-gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\HP\.gradle\caches\transforms-3\7a8c85c1d1a5e25c49762a7f02c496b9\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\HP\.gradle\caches\transforms-3\7a8c85c1d1a5e25c49762a7f02c496b9\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\transforms-3\d37c49a6282c9093ca1931e85c39f584\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\transforms-3\d37c49a6282c9093ca1931e85c39f584\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\cd9291093b3fd7c976014402196157e1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\cd9291093b3fd7c976014402196157e1\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\8680b2862bb1ecbe547138f743323035\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\8680b2862bb1ecbe547138f743323035\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\transforms-3\b66ae2728a53b41722f0d4985a092e50\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\61004dcf2988559164e1f3fbb0bc454a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\61004dcf2988559164e1f3fbb0bc454a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\transforms-3\c96ffacf0b2a1d4d9fa5d7777ac9e002\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\transforms-3\c96ffacf0b2a1d4d9fa5d7777ac9e002\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\50146a4b5c13b9372965dc0087ddcc19\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\50146a4b5c13b9372965dc0087ddcc19\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HP\.gradle\caches\transforms-3\fe1be72de5acf26ba4778c8bba88a4a7\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44

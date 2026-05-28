@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvDuration:    TextView
     private lateinit var layoutPlaceholder: LinearLayout
 
+
+    private lateinit var etVideoUrl: EditText
+    private lateinit var btnDownloadUrl: Button
+
     private var selectedUri:    Uri?    = null
     private var outputWebPPath: String? = null
     private var keepAspectRatio: Boolean = false
@@ -49,6 +53,27 @@ class MainActivity : AppCompatActivity() {
         imgPreview.setImageDrawable(null)
     }
 
+    private val tenorLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val path = result.data?.getStringExtra("webp_path") ?: return@registerForActivityResult
+            outputWebPPath   = path
+            imageDataVersion = System.currentTimeMillis()
+            val sizeKb = java.io.File(path).length() / 1024
+            setStatus("✅ Sticker listo ($sizeKb KB)")
+            layoutPlaceholder.visibility = View.GONE
+            imgPreview.setImageURI(Uri.fromFile(java.io.File(path)))
+            if (android.os.Build.VERSION.SDK_INT >= 28) {
+                (imgPreview.drawable as? android.graphics.drawable.AnimatedImageDrawable)?.start()
+            }
+            btnSend.isEnabled = true
+        }
+    }
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -63,6 +88,16 @@ class MainActivity : AppCompatActivity() {
         btnSend       = findViewById(R.id.btnSend)
         seekDuration  = findViewById(R.id.seekDuration)
         tvDuration    = findViewById(R.id.tvDuration)
+
+
+        etVideoUrl      = findViewById(R.id.etVideoUrl)
+        btnDownloadUrl  = findViewById(R.id.btnDownloadUrl)
+        // DESPUÉS:
+        btnDownloadUrl.setOnClickListener {
+            val url = etVideoUrl.text.toString().trim()
+            if (url.startsWith("http")) downloadAndConvert(url)
+            else setStatus("❌ Pegá un link válido")
+        }
 
         seekDuration.max = durationSteps.size - 1
         seekDuration.progress = durationSteps.size - 1
@@ -88,6 +123,17 @@ class MainActivity : AppCompatActivity() {
                     outputWebPPath?.let { path -> putExtra("webp_path", path) }
                 }
                 startActivity(intent)
+            }
+
+
+        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnSearchTenor)
+            .setOnClickListener {
+                tenorLauncher.launch(
+                    Intent(this, TenorSearchActivity::class.java).apply {
+                        putExtra("duration_ms", (durationSteps[seekDuration.progress] * 1000).toLong())
+                        putExtra("keep_aspect", keepAspectRatio)
+                    }
+                )
             }
 
         val btnToggleShape = findViewById<Button>(R.id.btnToggleShape)
@@ -195,6 +241,96 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setStatus(msg: String) { tvStatus.text = msg }
+
+
+    private fun downloadAndConvert(url: String) {
+        val durationMs = (durationSteps[seekDuration.progress] * 1000).toLong()
+        val isGif = url.contains(".gif", ignoreCase = true)
+
+        lifecycleScope.launch {
+            setLoading(true)
+            setStatus("⬇️ Descargando...")
+
+            val filePath = withContext(Dispatchers.IO) {
+                try {
+                    var currentUrl = url
+                    var connection: java.net.HttpURLConnection
+                    var redirects = 0
+                    while (true) {
+                        connection = java.net.URL(currentUrl).openConnection()
+                                as java.net.HttpURLConnection
+                        connection.instanceFollowRedirects = false
+                        connection.connectTimeout = 15_000
+                        connection.readTimeout    = 30_000
+                        connection.setRequestProperty("User-Agent", "Mozilla/5.0")
+                        connection.connect()
+                        val code = connection.responseCode
+                        if (code in 300..399 && redirects < 6) {
+                            currentUrl = connection.getHeaderField("Location") ?: break
+                            connection.disconnect()
+                            redirects++
+                        } else break
+                    }
+                    if (connection.responseCode != 200) return@withContext null
+                    val ext = if (isGif) "gif" else "mp4"
+                    val tmp = java.io.File(applicationContext.cacheDir, "url_video.$ext")
+                    connection.inputStream.use { inp -> tmp.outputStream().use { inp.copyTo(it) } }
+                    connection.disconnect()
+                    tmp.absolutePath
+                } catch (e: Exception) { null }
+            }
+
+            if (filePath == null) {
+                setLoading(false)
+                setStatus("❌ No se pudo descargar.")
+                return@launch
+            }
+
+            setStatus("⚡ Convirtiendo...")
+
+            val result = withContext(Dispatchers.IO) {
+                if (isGif) {
+                    converter.convertGifToAnimatedWebP(
+                        context         = applicationContext,
+                        gifFile         = java.io.File(filePath),
+                        maxDurationMs   = durationMs,
+                        fps             = 10,
+                        sizePx          = 512,
+                        keepAspectRatio = keepAspectRatio
+                    )
+                } else {
+                    converter.convertToAnimatedWebP(
+                        context         = applicationContext,
+                        inputUri        = Uri.fromFile(java.io.File(filePath)),
+                        maxDurationMs   = durationMs,
+                        fps             = 10,
+                        sizePx          = 512,
+                        keepAspectRatio = keepAspectRatio
+                    )
+                }
+            }
+
+            setLoading(false)
+
+            if (result != null) {
+                outputWebPPath = result
+                imageDataVersion = System.currentTimeMillis()
+                val sizeKb = java.io.File(result).length() / 1024
+                setStatus("✅ Sticker listo ($sizeKb KB)")
+                layoutPlaceholder.visibility = View.GONE
+                imgPreview.setImageURI(Uri.fromFile(java.io.File(result)))
+                if (android.os.Build.VERSION.SDK_INT >= 28) {
+                    (imgPreview.drawable as? android.graphics.drawable.AnimatedImageDrawable)?.start()
+                }
+                btnSend.isEnabled = true
+                etVideoUrl.text.clear()
+            } else {
+                setStatus("❌ Error al convertir.")
+            }
+        }
+    }
+
+
 
     companion object {
         private const val REQUEST_CODE_ADD_PACK = 200
