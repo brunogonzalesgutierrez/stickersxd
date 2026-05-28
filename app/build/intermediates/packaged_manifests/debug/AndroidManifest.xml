@@ -27,6 +27,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Sticker Converter"
         android:theme="@style/Theme.StickerApp" >
+        <activity android:name="com.tu.stickerapp.MyPacksActivity" />
+        <activity android:name="com.tu.stickerapp.PackDetailActivity" />
         <activity
             android:name="com.tu.stickerapp.MainActivity"
             android:exported="true" >

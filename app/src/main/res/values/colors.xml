@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#7C4DFF</color>
+    <color name="brand_secondary">#E040FB</color>
+    <color name="brand_surface">#1A1A2E</color>
+    <color name="brand_surface_variant">#22223B</color>
+    <color name="brand_card">#2D2B55</color>
+    <color name="brand_on_surface">#EAEAEA</color>
+    <color name="brand_on_surface_dim">#9E9BC8</color>
+    <color name="brand_success">#00E676</color>
+    <color name="brand_error">#FF5252</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

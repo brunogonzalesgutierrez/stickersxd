@@ -11,6 +11,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Sticker Converter"
         android:theme="@style/Theme.StickerApp">
+        <activity android:name=".MyPacksActivity"/>
+        <activity android:name=".PackDetailActivity"/>
 
         <activity
             android:name=".MainActivity"

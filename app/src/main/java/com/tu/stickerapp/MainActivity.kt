@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 import java.io.File
+import android.widget.LinearLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnSend:       Button
     private lateinit var seekDuration:  SeekBar
     private lateinit var tvDuration:    TextView
+    private lateinit var layoutPlaceholder: LinearLayout
 
     private var selectedUri:    Uri?    = null
     private var outputWebPPath: String? = null
@@ -43,8 +45,7 @@ class MainActivity : AppCompatActivity() {
         btnSend.isEnabled = false
         btnConvert.isEnabled = true
         setStatus("Video seleccionado ✓ — Tocá CONVERTIR")
-        tvPlaceholder.text = "📹"
-        tvPlaceholder.visibility = View.VISIBLE
+        layoutPlaceholder.visibility = View.VISIBLE
         imgPreview.setImageDrawable(null)
     }
 
@@ -54,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         imgPreview    = findViewById(R.id.imgPreview)
         tvPlaceholder = findViewById(R.id.tvPlaceholder)
+        layoutPlaceholder = findViewById(R.id.layoutPlaceholder)
         tvStatus      = findViewById(R.id.tvStatus)
         progressBar   = findViewById(R.id.progressBar)
         btnPick       = findViewById(R.id.btnPick)
@@ -78,6 +80,15 @@ class MainActivity : AppCompatActivity() {
         btnPick.setOnClickListener    { pickMedia.launch("video/*") }
         btnConvert.setOnClickListener { startConvert() }
         btnSend.setOnClickListener    { sendToWhatsApp() }
+
+
+        findViewById<com.google.android.material.button.MaterialButton>(R.id.btnMyPacks)
+            .setOnClickListener {
+                val intent = Intent(this, MyPacksActivity::class.java).apply {
+                    outputWebPPath?.let { path -> putExtra("webp_path", path) }
+                }
+                startActivity(intent)
+            }
 
         val btnToggleShape = findViewById<Button>(R.id.btnToggleShape)
         btnToggleShape.setOnClickListener {
@@ -112,7 +123,7 @@ class MainActivity : AppCompatActivity() {
                 imageDataVersion = System.currentTimeMillis()
                 val sizeKb = File(result).length() / 1024
                 setStatus("Sticker listo ✓  ($sizeKb KB)")
-                tvPlaceholder.visibility = View.GONE
+                layoutPlaceholder.visibility = View.GONE
                 imgPreview.setImageURI(Uri.fromFile(File(result)))
                 if (Build.VERSION.SDK_INT >= 28) {
                     (imgPreview.drawable as? AnimatedImageDrawable)?.start()

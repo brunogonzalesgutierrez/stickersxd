@@ -1,140 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_horizontal"
-    android:background="#0e0e0e">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🎬 Sticker Converter"
-        android:textSize="22sp"
-        android:textColor="#f0f0f0"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MP4 / GIF → WhatsApp"
-        android:textSize="13sp"
-        android:textColor="#777777"
-        android:layout_marginBottom="24dp"/>
-
-    <FrameLayout
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:background="#181818"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/imgPreview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerInside"
-            android:padding="8dp"/>
-
-        <TextView
-            android:id="@+id/tvPlaceholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Sin video"
-            android:textColor="#444444"
-            android:textSize="14sp"/>
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/tvStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Elegí un video para empezar"
-        android:textColor="#777777"
-        android:textSize="13sp"
-        android:layout_marginBottom="8dp"/>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_marginBottom="8dp"/>
-
-    <Button
-        android:id="@+id/btnPick"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="📁  ELEGIR VIDEO"
-        android:backgroundTint="#222222"
-        android:textColor="#f0f0f0"
-        android:layout_marginBottom="8dp"/>
+    android:background="@color/brand_surface"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp"
-        android:gravity="center_vertical">
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- ── HEADER ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Duración máx:"
-            android:textColor="#777"
-            android:textSize="12sp"
-            android:layout_marginEnd="8dp"/>
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="28dp">
 
-        <SeekBar
-            android:id="@+id/seekDuration"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:max="5"
-            android:progress="2"
-            android:progressTint="#25D366"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎭 StickerApp"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:letterSpacing="0.02"/>
 
-        <TextView
-            android:id="@+id/tvDuration"
-            android:layout_width="40dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convertí videos en stickers animados"
+                android:textSize="14sp"
+                android:textColor="@color/brand_on_surface_dim"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- ── PREVIEW CARD ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3s"
-            android:textColor="#25D366"
-            android:textSize="12sp"
-            android:gravity="center"
-            android:layout_marginStart="8dp"/>
+            app:cardBackgroundColor="@color/brand_card"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="20dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <ImageView
+                    android:id="@+id/imgPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Preview del sticker"/>
+
+                <!-- Placeholder centrado -->
+                <LinearLayout
+                    android:id="@+id/layoutPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvPlaceholder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎬"
+                        android:textSize="56sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seleccioná un video"
+                        android:textSize="15sp"
+                        android:textColor="@color/brand_on_surface_dim"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+                <!-- Badge de tamaño (se muestra tras convertir) -->
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="12dp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:background="@drawable/bg_status_badge"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:text="Sin convertir"/>
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── OPCIONES CARD ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/brand_surface_variant"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Duración -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="⏱ Duración"
+                        android:textSize="14sp"
+                        android:textColor="@color/brand_on_surface"/>
+
+                    <TextView
+                        android:id="@+id/tvDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3s"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/brand_primary"
+                        android:background="@drawable/bg_chip"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"/>
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/brand_primary"
+                    android:thumbTint="@color/brand_primary"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#33FFFFFF"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Forma -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="✂️ Forma del sticker"
+                        android:textSize="14sp"
+                        android:textColor="@color/brand_on_surface"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnToggleShape"
+                        style="@style/Widget.StickerApp.Button.Outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuadrado"
+                        android:textSize="12sp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── PROGRESS BAR ── -->
+        <!-- DESPUÉS (corregido): -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:indeterminate="true"
+            app:indicatorColor="@color/brand_primary"
+            app:trackColor="#33FFFFFF"
+            app:trackCornerRadius="4dp"/>
+
+        <!-- ── BOTONES DE ACCIÓN ── -->
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMyPacks"
+            style="@style/Widget.StickerApp.Button.Outline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="🗂  Mis Stickers"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_marginBottom="12dp"/>
+
+
+
+
+        <!-- Seleccionar video -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPick"
+            style="@style/Widget.StickerApp.Button.Outline"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📁  Seleccionar video"
+            android:textSize="15sp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Convertir -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConvert"
+            style="@style/Widget.StickerApp.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="⚡  Convertir a Sticker"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Enviar a WhatsApp -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            style="@style/Widget.StickerApp.Button.Send"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💬  Enviar a WhatsApp"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:layout_marginBottom="24dp"/>
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnConvert"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="⚡  CONVERTIR A STICKER"
-        android:enabled="false"
-        android:backgroundTint="#222222"
-        android:textColor="#777777"
-        android:layout_marginBottom="8dp"/>
-
-<Button
-        android:id="@+id/btnToggleShape"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="Forma: Cuadrado"
-        android:backgroundTint="#222222"
-        android:textColor="#f0f0f0"
-        android:layout_marginBottom="8dp"/>
-
-    <Button
-        android:id="@+id/btnSend"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="AGREGAR A WHATSAPP"
-        android:enabled="false"
-        android:backgroundTint="#25D366"
-        android:textColor="#000000"/>
-
-</LinearLayout>
+</ScrollView>

@@ -1,10 +1,42 @@
 [
     {
-        "merged": "com.tu.stickerapp-merged_res-25:/layout_activity_main.xml.flat",
-        "source": "com.tu.stickerapp-main-27:/layout/activity_main.xml"
+        "merged": "com.tu.stickerapp-merged_res-32:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.tu.stickerapp-main-34:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.tu.stickerapp-merged_res-25:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.tu.stickerapp-main-27:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.tu.stickerapp-merged_res-32:/drawable_bg_delete_btn.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/drawable/bg_delete_btn.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/layout_item_pack_card.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/layout/item_pack_card.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/drawable_bg_sticker_thumb.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/drawable/bg_sticker_thumb.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/layout_activity_pack_detail.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/layout/activity_pack_detail.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/drawable_bg_status_badge.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/drawable/bg_status_badge.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/layout_activity_my_packs.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/layout/activity_my_packs.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/drawable_bg_chip.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/drawable/bg_chip.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/layout_activity_main.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.tu.stickerapp-merged_res-32:/layout_item_sticker_grid.xml.flat",
+        "source": "com.tu.stickerapp-main-34:/layout/item_sticker_grid.xml"
     }
 ]
